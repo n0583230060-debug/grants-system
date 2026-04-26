@@ -1,0 +1,90 @@
+.verify-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.verify-section {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.verify-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.verify-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.verify-field {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.verify-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.verify-value {
+  font-size: 13px;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.verify-email-section {
+  margin-bottom: 1.5rem;
+}
+
+.verify-email-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.verify-email-input {
+  padding: 10px 13px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-input);
+  font-size: 14px;
+  background: var(--bg-input);
+  color: var(--text);
+  outline: none;
+  width: 100%;
+  max-width: 420px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.verify-email-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217,119,87,0.12);
+}
+
+.verify-confirm-box {
+  background: #FFF8F5;
+  border: 1px solid #F5C6A0;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+}
+
+.verify-confirm-text {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 14px;
+}

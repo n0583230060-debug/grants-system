@@ -1,0 +1,280 @@
+.form-container {
+  direction: rtl;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.form-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 1.5rem 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-input {
+  padding: 10px 13px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-input);
+  font-size: 14px;
+  background: var(--bg-input);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217,119,87,0.12);
+}
+
+.form-input[readonly] {
+  background: #EDEAE5;
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.form-hint-link {
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.form-hint-link:hover {
+  text-decoration: underline;
+}
+
+.form-input--select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B6B6B' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 12px center;
+}
+
+/* Geoapify autocomplete — override to match project inputs */
+.geoapify-input-wrapper,
+.geoapify-geocoder-autocomplete-container {
+  width: 100% !important;
+}
+
+/* The actual <input> element */
+.geoapify-autocomplete-input {
+  width: 100% !important;
+  padding: 10px 13px !important;
+  height: auto !important;
+  line-height: normal !important;
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid var(--border-input) !important;
+  font-size: 14px !important;
+  background: var(--bg-input) !important;
+  color: var(--text) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s, box-shadow 0.15s !important;
+  font-family: inherit !important;
+  direction: rtl !important;
+  box-sizing: border-box !important;
+}
+
+.geoapify-autocomplete-input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(217,119,87,0.12) !important;
+}
+
+.geoapify-autocomplete-input::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Dropdown list */
+.geoapify-autocomplete-items {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-top: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+  margin-top: 4px !important;
+  padding: 4px 0 !important;
+  overflow: hidden !important;
+  z-index: 50 !important;
+}
+
+/* Each suggestion row */
+.geoapify-autocomplete-items div {
+  padding: 9px 14px !important;
+  font-size: 14px !important;
+  color: var(--text) !important;
+  direction: rtl !important;
+  transition: background 0.1s !important;
+}
+
+.geoapify-autocomplete-items div:hover,
+.geoapify-autocomplete-items .active {
+  background: var(--bg-input) !important;
+  color: var(--accent) !important;
+}
+
+/* Hide the location pin icon and close button */
+.geoapify-autocomplete-item .icon {
+  display: none !important;
+}
+
+.geoapify-close-button {
+  display: none !important;
+}
+
+/* Secondary address text */
+.geoapify-autocomplete-items .secondary-part {
+  color: var(--text-muted) !important;
+  font-size: 12px !important;
+}
+
+/* Custom select */
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.custom-select-trigger.is-open {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217,119,87,0.12);
+}
+
+.custom-select-placeholder {
+  color: var(--text-muted);
+}
+
+.custom-select-arrow {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform 0.15s;
+}
+
+.custom-select-arrow.is-open {
+  transform: rotate(180deg);
+}
+
+.custom-select-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  left: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  z-index: 50;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.custom-select-option {
+  padding: 9px 14px;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.custom-select-option:hover {
+  background: var(--bg-input);
+}
+
+.custom-select-option.is-selected {
+  color: var(--accent);
+  font-weight: 600;
+  background: #FEF0EC;
+}
+
+/* Sibling card */
+.sibling-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.sibling-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.sibling-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.sibling-remove-btn {
+  padding: 4px 12px;
+  background: #FEF0EC;
+  color: #C0392B;
+  border: 1px solid #F5C6BC;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+}
+
+.sibling-remove-btn:hover {
+  background: #FFEBEE;
+}
+
+.form-add-btn {
+  margin-top: 1rem;
+  padding: 9px 18px;
+  background: var(--bg-input);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.form-add-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}

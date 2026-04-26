@@ -1,0 +1,72 @@
+.view-status-page {
+  direction: rtl;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.view-status-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.view-status-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.view-status-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.view-status-badge--approved {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.view-status-badge--rejected {
+  background: #FFEBEE;
+  color: #C62828;
+}
+
+.view-status-badge--pending {
+  background: #FFF3E0;
+  color: #E65100;
+}
+
+.view-status-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.view-status-error {
+  background: #FEF0EC;
+  color: #C0392B;
+  border: 1px solid #F5C6BC;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+
+.view-status-loading {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.view-status-empty {
+  color: var(--text-muted);
+  font-size: 14px;
+}

@@ -1,0 +1,30 @@
+export const colors = {
+    bg: '#FAF9F7',
+    bgCard: '#FFFFFF',
+    bgInput: '#F5F1EC',
+    bgAccentLight: '#FDF1EB',
+    text: '#1C1C1C',
+    textSecondary: '#6B6B6B',
+    textMuted: '#9B9690',
+    accent: '#D97757',
+    border: '#E3DDD6',
+    white: '#FFFFFF',
+}
+
+export const s = {
+    body:       `margin:0; padding:0; background-color:${colors.bg}; font-family:Arial,'Segoe UI',sans-serif; color:${colors.text};`,
+    outerTable: `background:${colors.bg}; padding:40px 20px;`,
+    card:       `background:${colors.bgCard}; border-radius:16px; border:1px solid ${colors.border}; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.08);`,
+    header:     `background:${colors.text}; padding:24px 32px; text-align:right;`,
+    headerText: `color:${colors.white}; font-size:18px; font-weight:600;`,
+    content:    `padding:36px 32px; text-align:right; direction:rtl;`,
+    footer:     `background:${colors.bg}; border-top:1px solid ${colors.border}; padding:20px 32px; text-align:right;`,
+    footerText: `margin:0; font-size:12px; color:${colors.textMuted};`,
+    h2:         `margin:0 0 8px; font-size:22px; color:${colors.text};`,
+    bodyText:   `margin:0 0 16px; font-size:15px; color:${colors.textSecondary}; line-height:1.6;`,
+    smallText:  `margin:0; font-size:14px; color:${colors.textSecondary}; line-height:1.6;`,
+    statusBox:  (bg, borderColor) => `background:${bg}; border-radius:12px; padding:20px 24px; margin:24px 0; border-right:4px solid ${borderColor};`,
+    statusLabel:`margin:0; font-size:14px; color:${colors.textSecondary};`,
+    statusValue:(color) => `margin:6px 0 0; font-size:18px; font-weight:600; color:${color};`,
+    button:     (color) => `display:inline-block; margin-top:24px; padding:12px 24px; background-color:${color}; color:${colors.white}; text-decoration:none; border-radius:8px; font-size:14px; font-weight:600;`,
+}

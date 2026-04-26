@@ -1,0 +1,79 @@
+.doc-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.doc-field {
+  margin-bottom: 1rem;
+}
+
+.doc-label-row {
+  margin-bottom: 6px;
+}
+
+.doc-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.doc-label-required {
+  color: var(--accent);
+  margin-right: 2px;
+}
+
+.doc-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.doc-no-file {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.doc-file-name {
+  font-size: 13px;
+  color: #2E7D32;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.doc-choose-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--bg-input);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.doc-choose-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.doc-hidden-input {
+  display: none;
+}
+
+.doc-remove-btn {
+  padding: 8px 14px;
+  background: #FEF0EC;
+  color: #C0392B;
+  border: 1px solid #F5C6BC;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  transition: background 0.15s;
+}
+
+.doc-remove-btn:hover {
+  background: #FFEBEE;
+}
