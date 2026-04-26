@@ -30,8 +30,8 @@ const __dirname = path.dirname(__filename)
 
 // שרת את תיקיית uploads
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
-app.use('/api/auth', authRoutes)
-app.use('/api/requests', grantRequestRoutes)
+app.use('/auth', authRoutes)
+app.use('/requests', grantRequestRoutes)
 
 
 const PORT = process.env.PORT || 3001
