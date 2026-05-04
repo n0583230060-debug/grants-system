@@ -1,6 +1,8 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
 import Dashboard from './pages/Dashboard'
 import ProtectedRoute from './components/ProtectedRoute'
 import SendRequest from './pages/SendRequest'
@@ -8,8 +10,6 @@ import ViewStatus from './pages/ViewStatus'
 import ViewRequests from './pages/ViewRequests'
 import RequestDetails from './pages/RequestDetails'
 import AdminDashboard from './pages/AdminDashboard'
-import ForgotPassword from './pages/ForgotPassword'
-import ResetPassword from './pages/ResetPassword'
 import Navbar from './components/Navbar'
 const App = () => {
     return (
