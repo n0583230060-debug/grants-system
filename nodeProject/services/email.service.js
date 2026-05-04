@@ -105,3 +105,30 @@ export const sendStatusUpdate = async (email, firstName, status) => {
         console.error('שגיאה בשליחת אימייל:', err)
     }
 }
+
+export const sendPasswordResetCode = async (email, firstName, resetCode) => {
+    if (!email) return
+    try {
+        await getResend().emails.send({
+            from: 'מערכת מלגות <onboarding@resend.dev>',
+            to: email,
+            subject: 'קוד איפוס סיסמה שלך',
+            html: emailWrapper(`
+                <h2 style="${s.h2}">שלום ${firstName},</h2>
+                <p style="${s.bodyText}">
+                    בקשת לאיפוס סיסמה התקבלה. להלן קוד האימות שלך:
+                </p>
+
+                <div style="${s.statusBox(colors.bgInput, colors.accent)}">
+                    <p style="${s.statusLabel}">קוד אימות</p>
+                    <p style="${s.statusValue(colors.accent)}">${resetCode}</p>
+                </div>
+
+                <p style="${s.smallText}">קוד זה תקף למשך 15 דקות בלבד.</p>
+                <p style="${s.smallText}">אם לא ביקשת איפוס סיסמה, אנא התעלם מהודעה זו.</p>
+            `)
+        })
+    } catch (err) {
+        console.error('שגיאה בשליחת אימייל:', err)
+    }
+}

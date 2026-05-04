@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(ls -Recurse \"c:\\\\Users\\\\n0583\\\\OneDrive\\\\Documents\\\\פרויקט react node\\\\reactFinalProject\\\\src\" | Where-Object { $_.PSIsContainer } | Select-Object FullName)",
+      "PowerShell(ls -Recurse \"c:\\\\Users\\\\n0583\\\\OneDrive\\\\Documents\\\\פרויקט react node\\\\reactFinalProject\\\\src\" | Where-Object { !$_.PSIsContainer } | Select-Object FullName)"
+    ]
+  }
+}

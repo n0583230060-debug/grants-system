@@ -8,6 +8,8 @@ import ViewStatus from './pages/ViewStatus'
 import ViewRequests from './pages/ViewRequests'
 import RequestDetails from './pages/RequestDetails'
 import AdminDashboard from './pages/AdminDashboard'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
 import Navbar from './components/Navbar'
 const App = () => {
     return (
@@ -21,6 +23,8 @@ const App = () => {
                 {/* דפים ציבוריים */}
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/reset-password" element={<ResetPassword />} />
                 <Route path="/sendRequest" element={<ProtectedRoute studentOnly><SendRequest /></ProtectedRoute>} />
                 <Route path="/viewStatus" element={<ProtectedRoute studentOnly><ViewStatus /></ProtectedRoute>} />
                 {/* דפים מוגנים — רק לסטודנטים */}

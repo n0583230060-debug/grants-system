@@ -76,8 +76,8 @@
 }
 
 .verify-confirm-box {
-  background: #FFF8F5;
-  border: 1px solid #F5C6A0;
+  background: var(--confirm-bg);
+  border: 1px solid var(--confirm-border);
   border-radius: var(--radius-md);
   padding: 1rem;
   text-align: center;

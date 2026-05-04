@@ -75,6 +75,10 @@ const Login = () => {
                 </form>
 
                 <p className="login-link">
+                    <Link to="/forgot-password">שכחתי סיסמה</Link>
+                </p>
+
+                <p className="login-link">
                     אין לך חשבון? <Link to="/register">הירשם עכשיו</Link>
                 </p>
             </div>

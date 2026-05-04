@@ -37,7 +37,7 @@
 
 .doc-file-name {
   font-size: 13px;
-  color: #2E7D32;
+  color: var(--success-text);
   font-weight: 500;
   word-break: break-word;
 }
@@ -66,14 +66,14 @@
 
 .doc-remove-btn {
   padding: 8px 14px;
-  background: #FEF0EC;
-  color: #C0392B;
-  border: 1px solid #F5C6BC;
+  background: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid var(--error-border);
   border-radius: var(--radius-sm);
   font-size: 13px;
   transition: background 0.15s;
 }
 
 .doc-remove-btn:hover {
-  background: #FFEBEE;
+  background: var(--error-hover);
 }

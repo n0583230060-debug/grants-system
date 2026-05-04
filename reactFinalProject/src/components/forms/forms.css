@@ -56,7 +56,7 @@
 }
 
 .form-input[readonly] {
-  background: #EDEAE5;
+  background: var(--readonly-bg);
   color: var(--text-muted);
   cursor: default;
 }
@@ -224,7 +224,7 @@
 .custom-select-option.is-selected {
   color: var(--accent);
   font-weight: 600;
-  background: #FEF0EC;
+  background: var(--error-bg);
 }
 
 /* Sibling card */
@@ -251,15 +251,15 @@
 
 .sibling-remove-btn {
   padding: 4px 12px;
-  background: #FEF0EC;
-  color: #C0392B;
-  border: 1px solid #F5C6BC;
+  background: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid var(--error-border);
   border-radius: var(--radius-sm);
   font-size: 12px;
 }
 
 .sibling-remove-btn:hover {
-  background: #FFEBEE;
+  background: var(--error-hover);
 }
 
 .form-add-btn {
