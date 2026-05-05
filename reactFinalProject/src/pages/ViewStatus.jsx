@@ -14,6 +14,8 @@ const ViewStatus = () => {
     const [status, setStatus] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
+    const [sendingEmail, setSendingEmail] = useState(false)
+    const [emailSuccess, setEmailSuccess] = useState(false)
 
     useEffect(() => {
         const loadStatus = async () => {
@@ -33,6 +35,20 @@ const ViewStatus = () => {
         loadStatus()
     }, [])
 
+    const handleSendEmail = async () => {
+        setSendingEmail(true)
+        setError('')
+        try {
+            await API.post('/requests/send-status-email')
+            setEmailSuccess(true)
+            setTimeout(() => setEmailSuccess(false), 3000)
+        } catch (err) {
+            setError(err.response?.data?.message || 'שגיאה בשליחת האימייל')
+        } finally {
+            setSendingEmail(false)
+        }
+    }
+
     const s = status?.status
     const { badge, label, text } = STATUS_MAP[s] ?? { badge: 'view-status-badge--pending', label: 'ממתין', text: 'בקשתך נמצאת בבדיקה' }
 
@@ -48,6 +64,14 @@ const ViewStatus = () => {
                     <>
                         <div className={`view-status-badge ${badge}`}>{label}</div>
                         <p className="view-status-text">{text}</p>
+                        <button 
+                            className="view-status-email-btn" 
+                            onClick={handleSendEmail}
+                            disabled={sendingEmail}
+                        >
+                            {sendingEmail ? 'שולח...' : '📧 שלח סטטוס למייל'}
+                        </button>
+                        {emailSuccess && <p className="view-status-success">סטטוס נשלח בהצלחה!</p>}
                     </>
                 )}
             </div>

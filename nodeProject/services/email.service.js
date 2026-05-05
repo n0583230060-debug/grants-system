@@ -2,7 +2,9 @@ import { Resend } from 'resend'
 import { s, colors } from './email.styles.js'
 
 const getResend = () => new Resend(process.env.RESEND_API_KEY)
-const STATUS_URL = `${process.env.CLIENT_URL || 'http://localhost:5173'}/viewStatus`
+// const STATUS_URL = `${process.env.CLIENT_URL || 'http://localhost:5173'}/viewStatus`
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5174'
+const STATUS_URL = `${CLIENT_URL}/viewStatus`
 
 const emailWrapper = (content) => `
 <!DOCTYPE html>

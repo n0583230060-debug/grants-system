@@ -312,3 +312,35 @@ export const updateRequestStatus = async (req, res) => {
         return res.status(500).json({ message: err.message })
     }
 }
+
+// ==============================
+// שליחת סטטוס בקשה למייל — לסטודנט
+// ==============================
+export const sendStatusEmail = async (req, res) => {
+    try {
+        // שליפת הבקשה של המשתמש
+        const request = await GrantRequest.findOne({ user: req.user.id })
+
+        if (!request) {
+            return res.status(404).json({ message: 'לא נמצאה בקשה' })
+        }
+
+        if (!request.email) {
+            return res.status(400).json({ message: 'אין כתובת אימייל בקובץ הבקשה' })
+        }
+
+        // שליחת המייל עם הסטטוס
+        await sendStatusUpdate(
+            request.email,
+            request.personalDetails.firstName,
+            request.status
+        )
+
+        return res.status(200).json({
+            message: 'סטטוס הבקשה נשלח בהצלחה!'
+        })
+
+    } catch (err) {
+        return res.status(500).json({ message: err.message })
+    }
+}

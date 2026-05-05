@@ -11,7 +11,8 @@ import {
     getAllRequests,
     getRequestById,
     updateRequestStatus,
-    getRequestStats
+    getRequestStats,
+    sendStatusEmail
 } from '../controllers/grantRequest.controller.js'
 import { verifyToken, verifyAdmin } from '../middleware/authMiddleware.js'
 
@@ -43,6 +44,9 @@ router.get('/draft', verifyToken, getDraft)
 
 // צפייה בסטטוס הבקשה שלי
 router.get('/my-status', verifyToken, getMyRequestStatus)
+
+// שליחת סטטוס הבקשה למייל
+router.post('/send-status-email', verifyToken, sendStatusEmail)
 
 // ==============================
 // routes של מנהל — דורשים הרשאת admin
